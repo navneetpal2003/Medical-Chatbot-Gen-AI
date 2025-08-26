@@ -45,7 +45,7 @@ def index():
 
 @app.route("/get", methods=["GET","POST"])
 def caht():
-    msg=request.form(msg)
+    msg=request.form["msg"]
     input=msg
     print(input)
     response=rag_chain.invoke({"input":msg})
